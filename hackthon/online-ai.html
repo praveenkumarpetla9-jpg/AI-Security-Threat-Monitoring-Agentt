@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SentinelAI Online Runner</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Inter, Arial, sans-serif;
+      background: #090c14;
+      color: #f8fafc;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, rgba(59,130,246,0.25), transparent 25%),
+        #090c14;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .shell {
+      width: min(860px, 100%);
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(96, 165, 250, 0.25);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.45);
+    }
+
+    #chatBox {
+      min-height: 320px;
+      border: 1px solid rgba(96, 165, 250, 0.2);
+      border-radius: 18px;
+      padding: 18px;
+      background: rgba(15, 23, 42, 0.7);
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .msg {
+      max-width: 80%;
+      padding: 12px 14px;
+      border-radius: 14px;
+      line-height: 1.5;
+      font-size: 14px;
+      background: rgba(30, 41, 59, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+    }
+
+    .msg.user {
+      align-self: flex-end;
+      background: rgba(37, 99, 235, 0.28);
+    }
+
+    .controls {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    #aiInput {
+      flex: 1;
+      border-radius: 14px;
+      border: 1px solid rgba(96, 165, 250, 0.2);
+      background: rgba(15, 23, 42, 0.9);
+      color: #f8fafc;
+      padding: 14px 16px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    button {
+      border: 0;
+      border-radius: 14px;
+      padding: 14px 18px;
+      font-weight: 700;
+      cursor: pointer;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div id="chatBox"></div>
+
+    <div class="controls">
+      <input id="aiInput" type="text" placeholder="Ask your question" />
+      <button type="button" onclick="sendAI()">Send</button>
+    </div>
+  </div>
+
+  <script src="./ai%20(1).js"></script>
+</body>
+</html>
